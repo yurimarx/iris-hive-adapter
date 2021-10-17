@@ -25,7 +25,7 @@
         "showSystem": false,
         "previewLimit": 50,
         "server": "localhost",
-        "port": 52795,
+        "port": 52773,
         "askForPassword": false,
         "driver": "InterSystems IRIS",
         "name": "IRISAPP",

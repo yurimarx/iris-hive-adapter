@@ -1,2 +1,4 @@
 **/.DS_Store
 .git
+\hdfs\namenode\current
+\hdfs\datanode\current

@@ -1,6 +1,10 @@
-## iris-interoperability-template
-This is a template of InterSystems IRIS Interoperability solution.
-It contains a simple interoperablity solution which reads data from Reddit, filters it and outputs into file or sends via email.
+## iris-hive-adapter
+This is an InterSystems IRIS Interoperability solution for SQL DML and DDL into Big Data repositories using IRIS Custom Adapter.
+
+It contains a Big Data repository with Hadoop employee data, Apache Hive modules to allows create and edit Big Data Hadoop databases and tables, select, insert, update, delete and query data using SQL sentences inside Object Script.
+
+With this adapter Object Script and Productions will be able to create and/or populate Hadoop Big Data repositories using SQL commands!
+
 
 ## What The Sample Does
 
@@ -11,6 +15,12 @@ You can alter both the URL and frequency in the service's settings.
 
 The production has a business process with a rule, which filters on news that mentions cats and dogs. The business process then sends this data to a business operation which either saves data to a source folder /output/Dog.txt or /output/Cat.txt.
 <img width="864" alt="Screenshot 2020-10-29 at 19 38 58" src="https://user-images.githubusercontent.com/2781759/97606568-fcf32180-1a20-11eb-90de-4257dd2cf552.png"> 
+
+
+## Credits
+1. Tutorial - Apache Hive on Docker (author: Hrishi Shirodkar) - https://hshirodkar.medium.com/apache-hive-on-docker-4d7280ac6f8e
+2. IRIS Template for Interoperability (author: Evgeny Shvarov) - https://openexchange.intersystems.com/package/iris-interoperability-template
+
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.

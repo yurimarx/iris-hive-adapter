@@ -1,3 +1,6 @@
 .DS_Store
-
-
+hdfs/datanode/current/*
+hdfs/namenode/current/*
+metastore-postgresql/*
+hdfs/datanode/in_use.lock
+hdfs/namenode/in_use.lock
