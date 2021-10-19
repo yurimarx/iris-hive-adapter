@@ -28,7 +28,9 @@ $ docker-compose build
 3. Run the IRIS container with your project:
 
 ```
-$ docker-compose up -d
+$ docker-compose up
 ```
+
+4. Open the HiveProduction
 
 

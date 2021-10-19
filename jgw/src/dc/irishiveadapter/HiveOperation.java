@@ -18,7 +18,7 @@ public class HiveOperation extends BusinessOperation {
 	// Connection to InterSystems IRIS
     private IRIS iris;
     
-	private static final Logger logger = Logger.getLogger(TestHiveConn.class.getCanonicalName());
+	private static final Logger logger = Logger.getLogger(HiveOperation.class.getCanonicalName());
 	private static final String JDBC_DRIVER_NAME = "org.apache.hive.jdbc.HiveDriver";
 
 	@Override

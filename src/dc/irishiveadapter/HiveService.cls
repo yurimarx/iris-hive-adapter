@@ -12,19 +12,23 @@ Class dc.irishiveadapter.HiveService Extends Ens.BusinessService
 Parameter ADAPTER = "EnsLib.HTTP.InboundAdapter";
 
 // custom parameter to allows production user set hive server 
-Property Connection As %String(MAXLEN = 255);
+
+Property HiveConnection As %String(MAXLEN = 255);
 
 // custom parameter to allows production user set hive server 
+
 Property Type As %String(MAXLEN = 4);
 
 // when you set parameter Connection and Type to SETTINGS parameter, the production IRIS interface create a field to the user fills
+
 // so the user will inform server connection and type for the hive request 
 
-Parameter SETTINGS = "Connection,Type";
+Parameter SETTINGS = "HiveConnection";
 
 // This method is mandatory to have a business service. It receives the multipart file into pInput 
 
 // and returns a result to the caller using pOutput
+
 Method OnProcessInput(pInput As %GlobalCharacterStream, Output pOutput As %RegisteredObject) As %Status
 {
     //try to do the actions
@@ -40,11 +44,11 @@ Method OnProcessInput(pInput As %GlobalCharacterStream, Output pOutput As %Regis
         //create request object to send
         Set tRequest=##class(dc.irishiveadapter.HiveRequest).%New()
         Set tRequest.SQL = SQL
-        Set tRequest.Connection = ..Connection
-        Set tRequest.Type = ..Type
+        Set tRequest.Connection = ..HiveConnection
+        Set tRequest.Type = pInput.Attributes("Params","Type",1)
 
-        //send to lookup process
-        Set tSC=..SendRequestSync("EHTTP.LookupProcess",tRequest,.tResponse)
+        Set tSC = ..SendRequestSync("HiveOperation", tRequest,.tResponse, 1200)
+        
 
         //define output for OnProcessInput
         Set pOutput=tResponse
@@ -58,8 +62,6 @@ Method OnProcessInput(pInput As %GlobalCharacterStream, Output pOutput As %Regis
     }
 
     Quit tSC
-    
 }
-
 
 }
