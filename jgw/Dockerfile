@@ -18,3 +18,4 @@ RUN javac -classpath $APP_HOME/jar/*:$APP_HOME/jgw/* dc/irishiveadapter/HiveOper
 FROM intersystemsdc/jgw:latest
 
 COPY --from=builder /tmp/app/jar/*.jar $GWDIR/
+COPY lib/*.jar $GWDIR/ 

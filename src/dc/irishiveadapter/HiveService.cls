@@ -51,7 +51,7 @@ Method OnProcessInput(pInput As %GlobalCharacterStream, Output pOutput As %Regis
         
 
         //define output for OnProcessInput
-        Set pOutput=tResponse
+        Set pOutput=tResponse.StringValue
 
         Return tSC
 
