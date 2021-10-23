@@ -1,7 +1,7 @@
 Class dc.irishiveadapter.HiveRequest Extends Ens.Request
 {
 
-Property SQL As %String;
+Property SQL As %String(MAXLEN = "");
 
 Property Connection As %String;
 
