@@ -35,9 +35,13 @@ $ docker-compose up
 
 5. Click Start to run to production
 
-6. Now we will test the App! Run your REST Client app (like Postman) the following URLs and command in the body (using POST verb):
-6.1 To create a new table in the Big Data: POST http://localhost:9980/?Type=DDL. In the BODY: CREATE TABLE helloworld (message String)
-6.2 To insert in the table: POST http://localhost:9980/?Type=DDL. In the BODY: INSERT INTO helloworld VALUES ("hello")
-6.3 To get the result list from the table: POST http://localhost:9980/?Type=DML. In the BODY: SELECT * FROM helloworld (P.S.: Type is DML here)
+6. Now we will test the App! Run your REST Client app (like Postman) the following URLs and command in the body (using POST verb):    
+- 6.1 To create a new table in the Big Data:  POST http://localhost:9980/?Type=DDL        
+In the BODY:`**CREATE TABLE helloworld (message String)**
+- 6.2 To insert in the table: POST http://localhost:9980/?Type=DDL.    
+In the BODY: **INSERT INTO helloworld VALUES ('hello')**
+- 6.3 To get the result list from the table: POST http://localhost:9980/?Type=DML.     
+In the BODY: **SELECT * FROM helloworld**   
+(P.S.: Type is **DML** here)
 
 7. Enjoy!!
